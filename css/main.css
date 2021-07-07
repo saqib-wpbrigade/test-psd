@@ -1,0 +1,43 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.container{
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.parent_container{
+  background-color: aliceblue;
+  height: 50px;
+}
+
+.icon{
+  
+  color:#ffff;
+  background-color: #217f40;
+  width:24px;
+  height: 24px;
+  border-radius: 12px;
+  position: absolute;
+  top: 5px;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+p{
+  font-family: roboto;
+  font-weight: 500;
+  line-height: 22px;
+  color:#217f40;
+  font-size: 14px;  
+}
+.parent_container .container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
