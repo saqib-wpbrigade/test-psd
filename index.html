@@ -19,6 +19,12 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/slick-theme.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link
+      rel="stylesheet"
+      href="css/fancybox.css"
+    />
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -62,7 +68,7 @@
         </nav>
         <div class="search">
           <input type="search" placeholder="SEARCH" />
-          <button type="submit"><img src="img/search-icon.png"></button>
+          <button type="submit"><img href="#" src="img/search-icon.png"></button>
         </div>
       </div>
 
@@ -84,7 +90,7 @@
       <div class="reebok">
         <div class="reebok-content">
           <p>PARTNERSHIP BY</p>
-          <img src="img/reebok-logo.png" />
+          <img href="#" src="img/reebok-logo.png" />
         </div>
       </div>
 
@@ -95,31 +101,77 @@
 
   <div class="hero-section">
     <div class="container">
-      <div class="hero-content">
+     <div class="slider">
+       <div class="hero-content">
         <h1>GET READY FOR NEW <br>ADIDAS BANDS</h1>
         <P>Adidas tracks all begin with a starting gate and end with a finish line, but everything in between varies
           from track to track. Because no two tracks are alike, this action sport keeps you on your toes wherever you
           are racing.</P>
-
-      </div>
-      <div class="image-box">
+       </div>
+       <div class="image-box">
         <img src="img/video-thumbnail-img.png"/>
-        <a><img src="img/play-icon.png"/></a>
-
-
-
+        <a href="https://youtu.be/DHnHpHkwqs4"
+        data-fancybox
+        data-type="iframe"
+        data-preload="false"
+        data-width="840"
+        data-height="580"><img  href="#" src="img/play-icon.png"/></a>
+       </div>
       </div>
+
+      <div class="slider">
+        <div class="hero-content">
+         <h1>GET READY FOR NEW <br>ADIDAS BANDS</h1>
+         <P>Adidas tracks all begin with a starting gate and end with a finish line, but everything in between varies
+           from track to track. Because no two tracks are alike, this action sport keeps you on your toes wherever you
+           are racing.</P>
+        </div>
+        <div class="image-box">
+         <img src="img/video-thumbnail-img.png"/>
+         <a href="https://youtu.be/DHnHpHkwqs4"
+         data-fancybox
+         data-type="iframe"
+         data-preload="false"
+         data-width="840"
+         data-height="580"><img href="#"  src="img/play-icon.png"/></a>
+        </div>
+       </div>
+
+       <div class="slider">
+        <div class="hero-content">
+         <h1>GET READY FOR NEW <br>ADIDAS BANDS</h1>
+         <P>Adidas tracks all begin with a starting gate and end with a finish line, but everything in between varies
+           from track to track. Because no two tracks are alike, this action sport keeps you on your toes wherever you
+           are racing.</P>
+        </div>
+        <div class="image-box">
+         <img href="#" src="img/video-thumbnail-img.png"/>
+         <a href="https://youtu.be/DHnHpHkwqs4"
+         data-fancybox
+         data-type="iframe"
+         data-preload="false"
+         data-width="840"
+         data-height="580"><img href="#"  src="img/play-icon.png"/></a>
+        </div>
+       </div>
+      
+
+
 
 
     </div>
-
-
-
+   
+    
   </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/main.js"></script>
-
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/fancybox.umd.js"></script>
+<script>
+  $('.hero-section .container').slick({dots:true});
+</script>
 </body>
 
 </html>

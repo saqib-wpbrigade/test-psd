@@ -176,11 +176,15 @@ transform: skew(-20deg);
   color: #ffffff;
   font-weight: 600;
   font-family: "Oswald";
+  transition: background-color 2s ease-in-out;
+  transition-delay: 1s;
   
  }
  .menu-items ul li:hover{
-   background-color:#268143;
+   background-color:#2b9b4e;
    cursor: pointer;
+   transition: ease-in-out;
+   
  }
  .menu-items ul li a:hover{
 color: #ffffff;
@@ -234,6 +238,7 @@ background: #012c1f url(../img/pattern-bg.png);
  }
  .active:hover{
   background-color: #13bb48;
+  transition: 0.2s;
  
   
 }
@@ -298,36 +303,39 @@ font-family: "Oswald";
 }
 .hero-section .container{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+align-items: center;
+justify-content: center;
+width:1008px;
+height:100%;
 }
 
 
+.hero-content{
+  float:left;
+  width:50%;
+  margin-top: 49px;
+}
 
 .hero-content h1{
-  width: 475px;
-  height: 94px;
+
   font-size: 50px;
   line-height: 50px;
   color: #ffffff;
   font-weight: 500;
   font-family: "Oswald";
 }
-.hero-content{
-padding-bottom: 47px;
-  
-  
-    margin-left: 63px;
+
+
+.image-box{
+  float: right;
+ margin-right: 25px;
 }
 
 
-
-
 .hero-content p{
-  padding-top: 37px;
-  margin-left:6px;
-  width: 453px;
-height: 122px;
+  
+  padding-top: 34px;
+  
 font-size: 18px;
 letter-spacing: 0px;
 line-height: 26px;
@@ -338,14 +346,46 @@ font-family: "Roboto";
 .image-box a{
 
   position: absolute;
+    top: 41%;
+    transform: translateX(140px);
+    
+  background-color: #134435bd;
+    border-radius: 50px;
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.image-box img:last-child{
+
+  position: absolute;
   top: 50%;
-  left: 69%;
-  background-color: #13362b;
-  border-radius: 50px;
-  height: 78px;
+  transform: translateY(-50%);
+  right: 32%;
+}
+.slider{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  height: 100%;
+  width:100%;
+}
+.hero-section .slick-prev:before {
+  content: url(../img/hero-slider-leftt-arrow.png);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 419%;
+}
+
+
+.hero-section .slick-next:before {
+  content: url(../img/hero-slider-right-arrow.png);
+  position: absolute;
   
+  top: 50%;
+  transform: translateY(-76%);
+  transform: translateY(-18px);
+  left: 420%;
 }
-.image-box img:first-child{
-  padding: 15px;
-    margin:75px;
-}
+
