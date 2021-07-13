@@ -154,15 +154,94 @@
          data-height="580"><img href="#"  src="img/play-icon.png"/></a>
         </div>
        </div>
-      
+    </div>
+  
+  </div>
+<div class="main-body">
+  <div class="container">
+    <div class="main-content">
+      <div class="slider-image">
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+        <img src="img/thubnail-slider-img.png" alt="thubnail slider"/>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
     </div>
-   
+    <div class="sidebar">
+      <div class="events">
+        <h3>EVENTS</h3>
+      </div>
+
+      <div class="events-content">
+        <div class="event-number">
+         <h3>1</h3></div>
+        
+          <div class="event-title"><h4>ADIDAS SHOW IN USA</h4><hr>
+            <span><p>USA</p></span>
+          </div>
     
+      </div>
+      <div class="events-content">
+        <div class="event-number">
+         <h3>1</h3></div>
+        
+          <div class="event-title"><h4>ADIDAS SHOW IN USA</h4><hr>
+            <span><p>USA</p></span>
+          </div>
+    
+      </div>
+      <div class="events-content">
+        <div class="event-number">
+         <h3>1</h3></div>
+        
+          <div class="event-title"><h4>ADIDAS SHOW IN USA</h4><hr>
+            <span><p>USA</p></span>
+          </div>
+    
+      </div>
+      <div class="events-content">
+        <div class="event-number">
+         <h3>1</h3></div>
+        
+          <div class="event-title"><h4>ADIDAS SHOW IN USA</h4><hr>
+            <span><p>USA</p></span>
+          </div>
+    
+      </div>
   </div>
+</div>
+
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/main.js"></script>
@@ -171,6 +250,45 @@
   <script src="js/fancybox.umd.js"></script>
 <script>
   $('.hero-section .container').slick({dots:true});
+</script>
+<script>
+  $('.slider-image').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+	
+
 </script>
 </body>
 
