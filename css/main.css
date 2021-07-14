@@ -394,19 +394,47 @@ font-family: "Roboto";
 .main-content{
   position: relative;
   width:830px;
+  margin-bottom:0px;
 }
-.slider-image{
+.slider-image .slick-dotted{
   position: relative;
+  margin-bottom: 0px;
   
   
+}
+ .hero-section .slick-dots li button {
+  font-size: 0px;
+  line-height: 0;
+  display: block;
+  width: 25px;
+  height: 0px;
+  padding: 3px 9px;
+  cursor: pointer;
+  background: #ffffff8c;
+  border: 0;
+  outline: 0;
+}
+.main-content .slick-dots li button {
+  font-size: 0px;
+  line-height: 0;
+  display: block;
+  width: 25px;
+  height: 0px;
+  padding: 3px 9px;
+  cursor: pointer;
+  background: #ffffff8c;
+  border: 0;
+  outline: 0;
 }
 .main-content .slick-next:before {
   content: url(../img/hero-slider-right-arrow.png);
   position: absolute;
 bottom: -10%;
-  transform: translateX(-31px);
+right:60%;
+ 
 
 }
+
 .main-content .slick-prev:before {
   content: url(../img/hero-slider-leftt-arrow.png);
   position: absolute;
@@ -416,26 +444,30 @@ bottom: -10%;
 }
  .main-content .slick-slide {
   display: block;
-  margin: 0 14px;
+  margin: 0 20px;
   
 
 
 }
 .slider-image img{
-  border:#08512d2d 10px solid;
+  border:#08512d2d 7px solid;
   background-image:url(../img/pattern-bg.png);
-
-
+ 
+width: 160px;
+height: 160px;
 
 }
+
+
  .slider-image .slick-dots{
   
   position: absolute;
   top:50%;
-  transform: translateY(140%);
+  transform: translateY(270%);
   
   display: block;
   width: 100%;
+  height: 35px;
   padding: 0px;
   margin: 0px;
   list-style: none;
@@ -450,7 +482,7 @@ bottom: -10%;
 
 }
 .sidebar{
-  width: 255px;
+  width: 256px;
 height: 341px;
 background-color: #1b7d3b;
   margin-left:30px;
@@ -461,12 +493,16 @@ background-color: #1b7d3b;
   align-items: center;
   
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 400;
   font-family: "Oswald";
-  width: 255px;
-height: 47px;
+  width:255px;
+  height:50px;
 background-color: #08512d;
+padding: 5px 10px;
 
+}
+.events h3{
+  font-weight: 400;
 }
 
 
@@ -474,38 +510,138 @@ background-color: #08512d;
 
   
   color: #1b7d3b;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     text-align: center;
     background-color: white;
+    
   }
+  .event-number h3{
+    padding-top: 10px;
+  }
+  .sidebar-content{
+    position: relative;
+    padding: 10px 13px;
+    
+}
 
 
 .events-content{
 
   display: flex;
   align-items: center;
-justify-content: space-evenly;
+
   font-size: 18px;
 line-height: 24px;
 color: #ffffff;
 font-weight: 500;
 font-family: "Oswald";
-padding-top: 20px;
+margin: 13px 0px;
+
+
 }
-.event-number h3{
- padding: 10px;
-}
+
 
 .event-title{
   position: relative;
-  width: 155px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Oswald";
+  margin-left: 13px;
+  
+
+  
+  
 }
-.event-title span{
+
+.event-title h4{
+  text-decoration:underline;
+  text-decoration-style: solid;
+  cursor: pointer;
+}
+.event-title p{
   font-size: 16px;
 line-height: 24px;
 color: #ffffff;
 font-weight: 300;
-font-family: "Roboto";
+font-family: "roboto";
+  text-decoration: none;
   
+}
+
+.cards{
+  position: relative;
+  width: 100%;
+}
+.card-1{
+width:min-content;
+display: grid;
+grid-template-rows: auto 1fr auto;
+grid-row-gap: 0px;
+}
+
+.card-1 img{
+  width: 255px;
+height: 162px;
+}
+.card-para{
+ 
+font-size: 14px;
+letter-spacing: 0px;
+line-height: 18px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Roboto";
+
+
+}
+.card-heading{
+  font-family: "Oswald";
+font-size: small;
+line-height: 24px;
+color: #ffffff;
+
+
+
+margin-bottom: 8px;
+
+}
+.card-heading h2{
+  font-weight: 500;
+  
+}
+.card-button{
+ 
+
+background:#08512d url('../img/pattern-bg.png');
+font-size: 20px;
+line-height: 24px;
+
+font-weight: 500;
+font-family: "Oswald";
+text-align: center;
+padding: 13px 0px;
+}
+.card-button a{
+  color: white;
+  text-decoration: none;
+}
+.cards{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap:29px;
+
+}
+.card-body{
+ 
+  background-color: #217f40;
+  background-image: url(../img/pattern-bg.png);
+  padding: 19px 12px;
+  text-align: left;
+}
+hr{
+  margin-top: 75px;
+  margin-bottom: 40px;
 }
