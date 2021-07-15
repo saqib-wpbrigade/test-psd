@@ -18,7 +18,7 @@ body{
   
   background:#ffffff url('../img/pattern-bg.png');
   background-repeat: no-repeat;
-  padding: 13px 0px;
+  padding: 14px 0px;
   
   
 }
@@ -52,7 +52,7 @@ body{
 
 
 .notification-bar p{
-  padding-top: 2px;
+  
   
   font-family: roboto;
   font-weight: 500;
@@ -108,12 +108,14 @@ body{
    font-weight: 600;
   font-family: "Oswald";
   text-decoration: none;
+  transition: 1s ease-in-out;
  
 }
 .header-button a:hover{
 
 background-color: #0e8349;
 color: #ffffff;
+transition: 1s ease-in-out;
   
  
 }
@@ -183,7 +185,7 @@ transform: skew(-20deg);
  .menu-items ul li:hover{
    background-color:#2b9b4e;
    cursor: pointer;
-   transition: ease-in-out;
+   transition: 1s ease-in-out;
    
  }
  .menu-items ul li a:hover{
@@ -243,7 +245,7 @@ background: #012c1f url(../img/pattern-bg.png);
   
 }
 .title{
-  background-color: #0e8349;
+  background: #248042 url(../img/pattern-bg.png);
   display: flex;
   /* padding: 23px 30px; */
   justify-content: center;
@@ -355,7 +357,9 @@ font-family: "Roboto";
     width: 90px;
     cursor: pointer;
 }
-
+.image-box a:hover{
+  background-color: #217f40;
+}
 .image-box img:last-child{
 
   position: absolute;
@@ -484,12 +488,12 @@ height: 160px;
 .sidebar{
   width: 256px;
 height: 341px;
-background-color: #1b7d3b;
+background: #1b7d3b url(../img/pattern-bg.png);
   margin-left:30px;
 }
 .events{
   
-  font-size: 20px;
+  font-size: 18px;
   align-items: center;
   
   color: #ffffff;
@@ -497,8 +501,8 @@ background-color: #1b7d3b;
   font-family: "Oswald";
   width:255px;
   height:50px;
-background-color: #08512d;
-padding: 5px 10px;
+background: #08512d url(../img/pattern-bg.png);
+padding: 5px 13px;
 
 }
 .events h3{
@@ -518,6 +522,7 @@ padding: 5px 10px;
   }
   .event-number h3{
     padding-top: 10px;
+    font-family: "Montserrat";
   }
   .sidebar-content{
     position: relative;
@@ -558,7 +563,7 @@ margin: 13px 0px;
 
 .event-title h4{
   text-decoration:underline;
-  text-decoration-style: solid;
+  text-underline-position: under;
   cursor: pointer;
 }
 .event-title p{
@@ -628,10 +633,14 @@ padding: 13px 0px;
   color: white;
   text-decoration: none;
 }
+.card-button a:hover{
+  text-decoration: underline;
+}
 .cards{
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap:29px;
+  margin-bottom: 40px;
 
 }
 .card-body{
@@ -644,4 +653,135 @@ padding: 13px 0px;
 hr{
   margin-top: 75px;
   margin-bottom: 40px;
+}
+
+.zigzag-section{
+  position: relative;
+  display: flex;
+  align-items: center;
+
+background: #1b7d3b url(../img/pattern-bg.png);
+overflow: hidden;
+
+}
+
+.zigzag-img img{
+  display: block;
+  
+}
+.zigzag-description{
+  padding: 35px 30px;
+  padding-right: 50px;
+ 
+  
+}
+.desc-title{
+  font-size: 20px;
+line-height: 24px;
+color: #ffffff;
+font-family: "Oswald";
+background-color: transparent;
+margin-bottom: 8px;
+
+
+}
+.zigzag-description h2{
+  font-size: 20px;
+  font-weight: 500;
+ 
+}
+.zigzag-description .description{
+  
+font-size: 14px;
+line-height: 18px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Roboto";
+padding-bottom: 10px;
+
+}
+
+
+.zigzag-container{
+  position: relative;
+}
+
+.zigzag-img{
+  clip-path: polygon(0 0, 100% 0%, 87% 100%, 0% 100%);}
+
+
+
+
+
+
+.zigzag-container .zigzag-section:nth-child(even){
+direction: ltr;
+
+
+}
+.zigzag-container .zigzag-section:nth-child(even) .zigzag-img{
+
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 8% 100%);
+}
+.footer{
+  background:#08512d url(../img/pattern-bg.png);
+  min-height: 500px;
+}
+.footer .container{
+  flex-direction: column;
+}
+.footer .container h2{
+  font-size: 30px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Oswald";
+    text-align: center;
+    padding: 40px;
+}
+
+
+.form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px 140px;
+}
+.input-fields{
+ 
+  width: 300px;
+  font-size: 16px;
+line-height: 24px;
+color: #ffffff;
+font-weight: 500;
+font-family: "Oswald";
+} 
+.input-fields label{
+ 
+  text-align: start;
+  padding-bottom: 5px;
+}
+
+.input-fields input,select{
+  width: 100%;
+  padding: 10px;
+}
+.span-gender{
+  grid-column: 1/3;
+}
+
+.input-fields input[type=radio]{
+  margin: 11px 16px;
+  height: 22px;
+
+width: 22px;
+
+}
+
+.span-gender label{
+  font-size: 14px;
+line-height: 24px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Roboto";
 }
