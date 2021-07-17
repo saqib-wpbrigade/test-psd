@@ -85,7 +85,7 @@
   <div class="title">
     <div class="container">
       <div class="tile-homepage">
-        <h1>HOMEPAGE</h1>
+        <h1>HOME PAGE</h1>
       </div>
       <div class="reebok">
         <div class="reebok-content">
@@ -349,15 +349,15 @@
          <div class="input-fields">
          <label for="name">STATE</label>
          <select>
-          <option value="0">USA</option>
-          <option value="1">AMERICA</option>
-          <option value="1">PAKISTAN</option>
-          <option value="1">INDIA</option>
+          <option value="USA">USA</option>
+          <option value="AMERICA">AMERICA</option>
+          <option value="PAKISTAN">PAKISTAN</option>
+          <option value="INDIA">INDIA</option>
          </select>
          </div>
          <div class="input-fields  span-gender" >
         <label for="gender" class="label-oswald">GENDER</label><br>
-        <input type="radio" name="gender" id="Male" value="male"/>
+        <input type="radio" name="gender" id="Male" value="male" checked />
         <label for="Male" class="gender-option">Male</label>
 
         <input type="radio" name="gender" id="Female" value="female"/>
@@ -377,6 +377,33 @@
       
        </div>
     
+      </div>
+      <div class="footer">
+        <div class="container">
+          <nav class="footer-menu">
+            <ul>
+              <li><a><span>OUR TRACKS </span></a></li>
+              <li><a><span>FIND EVENTS </span></a></li>
+              <li><a><span>TRACK MAP </span></a></li>
+              <li><a><span>SHOP </span></a></li>
+              <li><a><span>ABOUT US </span></a></li>
+  
+            </ul>
+          </nav>
+         
+
+          </div>
+          <div class="social-links">
+            <img src="img/facebook-icon.png">
+            <img src="img/twitter-icon.png">
+            <img src="img/instagram-icon.png">
+            <img src="img/linkedin-icon.png">
+            </div>
+            <div class="copyright">
+              <p>&copy;copyright 2020 Adidas</p>
+            </div>
+
+  
       </div>
 </body>
 
@@ -398,6 +425,7 @@
     dots: true,
     infinite: true,
     speed: 300,
+    variableWidth: true,
     slidesToShow: 4,
     slidesToScroll: 4,
     responsive: [
