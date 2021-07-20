@@ -23,6 +23,7 @@ body{
   
 }
 
+
 .icon{
   
   color:#f9f9f9;
@@ -443,11 +444,15 @@ font-family: "Roboto";
 }
 .main-content .slick-next:before {
   content: url(../img/hero-slider-right-arrow.png);
+  width: 5px;
   position: absolute;
 bottom: -10%;
 right:60%;
  
 
+}
+.main-content .slick-arrow{
+  right:-3px;
 }
 
 .main-content .slick-prev:before {
@@ -508,7 +513,7 @@ height: 160px;
   width: 256px;
 height: max-content;
 background: #1b7d3b url(../img/pattern-bg.png);
-  margin-left:25px;
+  margin-left:27px;
 }
 .events{
   
@@ -807,14 +812,19 @@ padding: 0px 17px;
 
 .input-fields input[type=radio]{
 
-  
+  appearance:none;
+  border: 2px solid white;
+  border-radius: 50px;
   height: 23px;
-
+background-color: white;
 width: 23px;
 margin-top: 7px;
-background: #1b7d3b url(..//img/pattern-bg.png);
 
 
+
+}
+.input-fields input[type=radio]:checked{
+background-color: #12864c;
 }
 
 
@@ -951,4 +961,187 @@ word-spacing:2px;
 select option:hover
 {
   background-color: #13bb48 !important;
+}
+
+/* TABLET RESPOSIVENESS */
+@media screen and (max-width:1023px){
+  .hero-section{
+  overflow: hidden;
+  }
+  .tile-homepage h1 {
+  font-size: 47px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Oswald";
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+  
+.menu-items ul li {
+  padding: 20px 21px 19px 19px;}
+.menu-items ul li a {
+  font-size: 16px;}
+  .title {
+    height: 80px;}
+.tile-homepage h1 {
+    font-size: 40px;}
+    .reebok {
+     
+      padding: 14px 70px;
+      position: relative;
+      left: 423px;}
+
+      .hero-section {
+        height: 450px;}
+
+        .hero-content {
+         
+          margin-top: 33px;
+      }
+      .hero-content h1 {
+        font-size: 40px;
+        line-height: 50px;
+        color: #ffffff;
+        font-weight: 500;
+        font-family: "Oswald";
+        word-spacing: -1px;
+    }
+    .hero-content p {
+      padding-top: 19px;
+      padding-right: 25px;
+      word-spacing: 2px;
+      font-size: 18px;
+      letter-spacing: 0px;
+     
+      
+  }
+  .image-box {
+  
+    margin-right: 109px;
+    margin-bottom: 54px;}
+
+    .slick-slide img {
+      display: block;
+      width: 290px;
+      height: 288px;
+     
+      transform: translateX(-13px);}
+      .image-box a {
+        position: absolute;
+        top: 29%;
+        transform: translateX(94px);
+       
+        height: 86px;
+        width: 86px;
+        
+    }
+    .image-box img:last-child {
+      display: block;
+      width: 31px;
+      height: 35px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 27%;
+  }
+  .main-body {
+    padding: 61px 0px;
+}
+.main-content {
+  position: relative;
+  width: 68%;}
+  .main-content .slick-track {
+    position: relative;
+    top: 0;
+    left: 0px;}
+    .slider-image img {
+     
+      width: 179px;
+      height: 190px;
+  }
+  .main-content .slick-prev:before {
+   
+    display: none;
+}
+.main-content .slick-next:before {
+  
+  display: none;
+}
+.events {
+  font-size: 18px;
+ 
+  padding: 7px 18px 8px;
+}
+.events h3 {
+  font-weight: 500;
+}
+ .sidebar .sidebar-content {
+  position: relative;
+  padding: 11px 20px 19px;
+}
+.sidebar .events-content {
+  margin: 7px 0px 7px;
+}
+.event-number {
+  padding: 10px 19px;}
+ .sidebar .events-content .event-title {
+    margin-left: 10px;
+}
+.cards{
+  grid-gap: 31px 32px;
+}
+.cards .card-body {
+ 
+  padding: 17px 10px 42px;
+  
+}
+.cards .card-heading {
+  margin-bottom: 8px;
+  word-spacing: 2px;
+}
+ .cards  .card-button {
+   
+    padding: 11px 0px;
+}
+.main-content hr{
+  
+    
+    margin-bottom: 43px;
+
+}
+.zigzag-section .zigzag-img {
+  width: 52%;
+  clip-path: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+}
+.zigzag-section .zigzag-description {
+  padding: 36px 31px;
+}
+.zigzag-section .zigzag-description .description {
+ 
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+.main-content {
+ 
+  margin-bottom: 42px;}
+  .contact-us .container {
+    display: block;
+    max-width: 601px;
+}
+.contact-us
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 16px;
+  grid-column-gap: 1px;
+  margin-top: 27px;
+}
+.contact-us .input-fields {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Oswald";
+  padding: 0px 14px;
+}
 }
