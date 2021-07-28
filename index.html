@@ -207,7 +207,7 @@
                 <h2>2019 NATIONAL CHAMPIONS CROWNED AT REEBOK</h2>
               </div>
               <div class="card-para">
-                <p>Membership has its perks. Joining ADIDAS means you can race at your local tracks </p>
+                <p>Membership has its perks. Joining ADIDAS means you can race at<br> your local tracks </p>
               </div>
             </div>
             <div class="card-button"><a href="#">READ MORE</a></div>
@@ -442,21 +442,29 @@
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: true,
+          arrows: false,
+        }
+      },
+      // {
+      //   breakpoint: 600,
+      //   settings: {
+      //     slidesToShow: 2,
+      //     slidesToScroll: 2
+      //   }
+      // },
+      {
+        breakpoint: 980,
+        settings: {
+         slidesToShow: 3,
+          slidesToScroll: 3
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
         }
       }
       // You can unslick at a given breakpoint now by adding:

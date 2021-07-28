@@ -276,8 +276,7 @@ letter-spacing: -1px;
   background-color: #ffff;
   padding: 26px 70px;
   position: relative;
-  left: 409px;
-  width: 745px;
+ 
   transform: skew(-16deg);
 }
 
@@ -288,9 +287,10 @@ letter-spacing: -1px;
   color: #217f40;
   font-weight: 600;
   font-family: "Oswald";
+  padding-left: 32px;
 }
 .reebok-content{
-  padding-left: 41px;
+  
   transform: skew(13deg);
  
 }
@@ -306,6 +306,7 @@ letter-spacing: -1px;
    background-position:center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .hero-section .container{
   display: flex;
@@ -384,8 +385,15 @@ font-family: "Roboto";
   content: url(../img/hero-slider-leftt-arrow.png);
   position: absolute;
   top: 50%;
+  
   transform: translateY(-50%);
-  right: 767%;
+  
+}
+.hero-section .slick-prev{
+  position: absolute;
+  top: 50%;
+left: -18px;
+  
 }
 
 
@@ -398,23 +406,24 @@ font-family: "Roboto";
   
   
 }
-.hero-section .slick-next{
+ .hero-section .slick-next{
 
   position: absolute;
   top: 50%;
-  left: 115%;
+  right:5px;
   display: block;
 
 
 
-}
+} 
 .main-body{
-  padding: 80px 0px;
+  padding: 80px 0px 0px 0px;
 }
 .main-content{
   position: relative;
   width:75%;
-  margin-bottom:61px;
+  margin-bottom:79px;
+  padding-right: 6px;
 }
 
  .hero-section .slick-dots li button {
@@ -565,7 +574,7 @@ height: 165px;
   width: 256px;
 height: max-content;
 background: #1b7d3b url(../img/pattern-bg.png);
-  margin-left:27px;
+  margin-left:25px;
 }
 .events{
   
@@ -575,7 +584,7 @@ background: #1b7d3b url(../img/pattern-bg.png);
   color: #ffffff;
   font-weight: 400;
   font-family: "Oswald";
-  width:255px;
+ 
   
 background: #08512d url(../img/pattern-bg.png);
 padding: 8px 16px;
@@ -652,6 +661,11 @@ margin:0px 0px 14px 0;
   text-underline-position:from-font;
   cursor: pointer;
 }
+.event-title h4:hover{
+
+text-decoration: none;
+
+}
 .event-title p{
   font-size: 16px;
 line-height: 27px;
@@ -690,7 +704,7 @@ font-family: "Roboto";
 font-size: small;
 line-height: 24px;
 color: #ffffff;
-
+word-spacing: 2px;
 
 
 margin-bottom: 8px;
@@ -710,7 +724,7 @@ line-height: 24px;
 font-weight: 500;
 font-family: "Oswald";
 text-align: center;
-padding: 13px 0px;
+padding: 11px 10px;
 }
 .card-button a{
   color: white;
@@ -722,7 +736,7 @@ padding: 13px 0px;
 .cards{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  grid-gap:29px;
+  grid-gap:30px;
   margin-bottom: 40px;
 
 }
@@ -730,7 +744,7 @@ padding: 13px 0px;
  
   background-color: #217f40;
   background-image: url(../img/pattern-bg.png);
-  padding: 19px 12px;
+ padding:  17px 10px 25px 10px;
   text-align: left;
 }
 hr{
@@ -781,7 +795,7 @@ color: #ffffff;
 font-weight: 400;
 font-family: "Roboto";
 padding-bottom: 7px;
-padding-left: 5px;
+
 
 }
 
@@ -864,10 +878,11 @@ padding: 0px 17px;
   appearance:none;
   border: 2px solid white;
   border-radius: 50px;
-  height: 23px;
+  height: 20px;
 background-color: white;
-width: 23px;
-margin-top: 7px;
+width: 19px;
+margin-top: 10px;
+margin-left: 2px;
 
 
 
@@ -886,8 +901,8 @@ color: #ffffff;
 font-weight: 400;
 font-family: "Roboto";
 vertical-align: super;
-padding: 5px;
-margin-top: 6px;
+padding: 6px 10px 0px 4px;
+
 }
 label.label-oswald{
   
@@ -1005,13 +1020,18 @@ cursor: pointer;
   font-family: "Montserrat";
   text-align: center;
 word-spacing:2px;
+padding: 2px;
 }
 
 select option:hover
 {
   background-color: #13bb48 !important;
 }
-
+@media screen and (max-width:1146px){
+  .cards{
+    grid-gap: 30px;
+  }
+}
 /* TABLET RESPOSIVENESS */
 @media screen and (max-width:1023px){
   .hero-section{
@@ -1025,7 +1045,12 @@ select option:hover
   letter-spacing: -1px;
   margin-bottom: 4px;
 }
-  
+  .hero-section .slick-next{
+    display: none;
+  }
+  .hero-section .slick-prev{
+    display: none;
+  }
 .menu-items ul li {
   padding: 20px 21px 19px 19px;}
 .menu-items ul li a {
@@ -1033,7 +1058,10 @@ select option:hover
   .title {
     height: 80px;}
 .tile-homepage h1 {
-    font-size: 40px;}
+    font-size: 40px;
+    width: max-content;
+  
+  }
     .reebok {
      
       padding: 14px 70px;
@@ -1114,19 +1142,43 @@ select option:hover
 }
 .main-content {
   position: relative;
-  width: 68%;}
+  width: 68%;
+  padding-right: 0px;
+  margin-bottom: 60px;
+
+}
+.main-content .slick-slide {
+  
+  margin: 0px 11px;
+}
+
+
   .main-content .slider-image{
 
-    width: 89%;
-    margin: 0 auto;
+    width: 99%;
+    
+   
 
   }
+  .card-para br{
+    display: none;
+  }
+  .slider-image img {
+    
+    height: 188px;
+ 
+}
+
+
   .main-content .slick-track {
     position: relative;
     top: 0;
-    left: 0px;}
-   
- 
+    
+  }
+  
+ .slider-arrows{
+   display: none;
+ }
 
 .events {
   font-size: 18px;
@@ -1185,9 +1237,7 @@ select option:hover
   padding-bottom: 0px;
   padding-left: 0px;
 }
-.main-content {
- 
-  margin-bottom: 42px;}
+
   .contact-us .container {
     display: block;
     max-width: 601px;
@@ -1242,7 +1292,26 @@ select option:hover
     width: 100%;
     display: flex;
 }
+.main-content .slider-image{
+  height: 70px;
+}
+.main-body .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.header-button .btn{
 
+  width: 50%;
+  margin: 0px;
+}
 
-
+.header-button a {
+  transform: skew(0deg);
+  width: 50%;
+}
+.header-button span{
+  transform: skew(0deg);
+}
 }
