@@ -159,6 +159,7 @@ transition: 0.5s ease-in-out;
    
  }
  
+ 
  .menu-items ul{
    position: relative;
   
@@ -274,31 +275,53 @@ letter-spacing: -1px;
 
 .reebok{
   background-color: #ffff;
-  padding: 26px 70px;
+  padding:26px 67px 26px 65px;
   position: relative;
  
   transform: skew(-16deg);
 }
 
 .reebok-content p{
-  padding-bottom: 5px;
+  width: -webkit-fill-available;
+  padding-bottom: 7px;
   font-size: 14px;
   line-height: 18px;
   color: #217f40;
   font-weight: 600;
   font-family: "Oswald";
-  padding-left: 32px;
+  padding-left: 46px;
 }
 .reebok-content{
   
   transform: skew(13deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
  
 }
+.reebok::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #ffffff;
+  height: 100%;
+  z-index: -1;
+
+
+
+
+
+}
 .reebok-content img{
-  width: 197px;
-    margin-left: -49px
+  width: 205px;
+  padding-bottom: 5px;
+    
 }
 .hero-section{
+  position: relative;
   height: 549px;
   width: 100%;
   background:linear-gradient(to right, #042e21b3 , #112d218c),
@@ -312,13 +335,13 @@ letter-spacing: -1px;
   display: flex;
 align-items: center;
 justify-content: center;
-width:1008px;
+width: 1004px;
 height:100%;
 }
 
 
 .hero-content{
-  float:left;
+  
   width:50%;
   margin-top: 49px;
 }
@@ -334,7 +357,7 @@ height:100%;
 
 
 .image-box{
-  float: right;
+  
  margin-right: 25px;
 }
 
@@ -374,14 +397,14 @@ font-family: "Roboto";
   transform: translateY(-50%);
   right: 27%;
 }
-.slider{
+ .hero-section .container .slider{
   display: flex;
   justify-content: center;
   justify-content: space-between;
   height: 100%;
-  width:100%;
+ width: 100%;
 }
-.hero-section .slick-prev:before {
+/* .hero-section .slick-prev:before {
   content: url(../img/hero-slider-leftt-arrow.png);
   position: absolute;
   top: 50%;
@@ -394,10 +417,10 @@ font-family: "Roboto";
   top: 50%;
 left: -18px;
   
-}
+} */
 
 
-.hero-section .slick-next:before {
+/* .hero-section .slick-next:before {
   content: url(../img/hero-slider-right-arrow.png);
   position: absolute;
   
@@ -405,8 +428,8 @@ left: -18px;
   transform: translateY(-51%);
   
   
-}
- .hero-section .slick-next{
+} */
+ /* .hero-section .slick-next{
 
   position: absolute;
   top: 50%;
@@ -415,7 +438,44 @@ left: -18px;
 
 
 
-} 
+}  */
+.hero-section .slider-arrows .previous{
+  
+    position: absolute;
+    top: 50%;
+   left: 5%;
+    transform: translateY(-50%);
+    
+  
+    cursor: pointer;
+    
+
+}
+.hero-section .slider-arrows{
+
+position: absolute;
+top: 50%;
+
+
+}
+.hero-section .slider-arrows .next{
+  
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
+ 
+
+
+}
+
+
+
+
+
+
 .main-body{
   padding: 80px 0px 0px 0px;
 }
@@ -937,7 +997,7 @@ color: #ffffff;
 font-weight: 500;
 font-family: "Oswald";
 text-align: center;
-background-color: #012c1f;
+background: #012c1f url(../img/pattern-bg.png);
 padding: 6px 58px;
 text-transform: uppercase;
 border: none;
@@ -1027,9 +1087,9 @@ select option:hover
 {
   background-color: #13bb48 !important;
 }
-@media screen and (max-width:1146px){
-  .cards{
-    grid-gap: 30px;
+@media screen and (max-width:1135px){
+  .hero-section .slider-arrows .previous{
+    left: 1%;
   }
 }
 /* TABLET RESPOSIVENESS */
@@ -1064,9 +1124,8 @@ select option:hover
   }
     .reebok {
      
-      padding: 14px 70px;
-      position: relative;
-      left: 423px;}
+      padding: 15px 70px;
+     }
 
       .hero-section {
         height: 450px;}
@@ -1276,6 +1335,26 @@ select option:hover
 
 
 @media screen and (max-width:767px){
+  .notification-bar .icon{
+    right: 16px;
+  }
+  .notification-bar{
+    padding: 14px 0px;
+  }
+  .notification-bar p{
+    font-size: 12px;
+    line-height: 22px;
+    
+    width: 100%;
+    padding-right: 15px;
+  }
+  .top-nav{
+    padding: 17px 0px;
+  }
+  .top-nav .logo{
+    width: 92px;
+  }
+  
   .title{
     display: none;
   }
@@ -1291,9 +1370,19 @@ select option:hover
     left: 0%;
     width: 100%;
     display: flex;
+    z-index: 1;
+    text-align: center;
+    
 }
-.main-content .slider-image{
-  height: 70px;
+.header-button .btn{
+  background-image: url(../img/pattern-bg.png);
+}
+.header-button a{
+  background-image: url(../img/pattern-bg.png);
+}
+
+.main-content{
+  width: 100%;
 }
 .main-body .container {
   position: relative;
@@ -1314,4 +1403,93 @@ select option:hover
 .header-button span{
   transform: skew(0deg);
 }
+.hero-section .container .slider{
+  flex-direction: column-reverse;
+}
+.hero-content{
+  margin-top: 27px;
+  width: 100%;
+}
+.hero-section{
+  
+  margin-top: 40px;
+  height: fit-content;
+}
+.hero-content h1 {
+  font-size: 30px;
+  line-height: 38px;}
+
+  .hero-content p{
+    word-spacing: 0px;
+    font-size: 16px;
+    
+    line-height: 22px;
+    padding-top: 14px;
+    word-spacing: 1px;
+  }
+.slider-arrows{
+  display: none;
+}
+/* .slick-slide img {
+  display: block;
+  width: 188px;
+  height: 232px;
+  transform: translateX(72px);
+  padding-top: 30px;
+} */
+.hero-section .container{
+  width: 100%;
+}
+.image-box{
+  margin: 0px;
+}
+.image-box a {
+  position: absolute;
+  top: 21%;
+  transform: translateX(141px);
+  height: 62px;
+  width: 62px;}
+  .image-box img:last-child {
+    display: block;
+    width: 23px;
+    height: 56px;
+    position: absolute;
+    top: 24%;
+    transform: translateY(-50%);
+    right: 27%;
+}
+.sidebar{
+  width: 100%;
+  margin-left: 0px;
+  margin-bottom: 50px;
+}
+.zigzag-section{
+  flex-direction: column;
+}
+.zigzag-section .zigzag-img{
+  width: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.zigzag-section .zigzag-img img{
+  width: 100%;
+}
+.zigzag-container .zigzag-section:nth-child(even) {
+  flex-direction: column;
+}
+.zigzag-container .zigzag-section:nth-child(even) .zigzag-img {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);}
+
+  .contact-us .input-fields{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0px;
+  }
+  .footer-menu ul{
+    flex-wrap: wrap;
+  }
+  .contact-us .container h2 {
+    font-size: 24px;}
+
+
+
 }

@@ -44,7 +44,7 @@
     <div class="top-nav">
       <div class="container">
 
-        <a href="#"><img src="img/logo.png" alt="adidas logo" /></a>
+        <a href="#"><img src="img/logo.png" alt="adidas logo" class="logo" /></a>
         <img src="img/burger-icon.png" class="hamburger" />
         <div class="header-button">
           <a class="btn"><span>MEMBERSHIP</span></a>
@@ -101,7 +101,13 @@
 
 
   <div class="hero-section">
+    <div class="slider-arrows">
+      <img src="img/hero-slider-leftt-arrow.png" class="previous">
+      <img src="img/hero-slider-right-arrow.png" class="next">
+    </div>
+    
     <div class="container">
+    
       <div class="slider">
         <div class="hero-content">
           <h1>GET READY FOR NEW <br>ADIDAS BANDS</h1>
@@ -423,7 +429,15 @@
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/fancybox.umd.js"></script>
 <script>
-  $('.hero-section .container').slick({ dots: true });
+  $('.hero-section .container').slick({ dots: true,
+    prevArrow: $('.hero-section .slider-arrows .previous'),
+    nextArrow: $('.hero-section .slider-arrows .next'),
+  
+  
+  
+  
+  
+   });
 </script>
 <script>
   $('.slider-image').slick({
@@ -463,8 +477,8 @@
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       }
       // You can unslick at a given breakpoint now by adding:
