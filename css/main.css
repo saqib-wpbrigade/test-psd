@@ -87,6 +87,9 @@ body{
 .hamburger{
   display:none;
 }
+.cross{
+  display: none;
+}
 .top-nav img{
   position: relative;
  height: 100%;
@@ -113,14 +116,7 @@ body{
   transition: 1s ease-in-out;
  
 }
-.header-button a:hover{
 
-background-color: #0e8349;
-color: #ffffff;
-transition: 0.5s ease-in-out;
-  
- 
-}
 
 
  .header-button .btn{
@@ -132,7 +128,10 @@ transition: 0.5s ease-in-out;
  }
  .header-button .btn:hover{
    cursor: pointer;
+   
+  
  }
+ 
 
  .header-button span{
    display: block;
@@ -186,7 +185,7 @@ transform: skew(-20deg);
   
  }
  .menu-items ul li:hover{
-   background-color:#2b9b4e;
+   background:#258a45 url(../img/pattern-bg.png);
    cursor: pointer;
    transition: 0.5s ease-in-out;
    
@@ -236,13 +235,13 @@ background: #012c1f url(../img/pattern-bg.png);
    border: none;
    cursor: pointer;
  }
- .active{
-   background-color: #268143;
+ .active1{
+   background: #268143 url(../img/pattern-bg.png);
   
    
  }
- .active:hover{
-  background-color: #13bb48;
+ .active1:hover{
+  background: #06a137 url(../img/pattern-bg.png);
   transition: 0.2s;
  
   
@@ -925,6 +924,7 @@ padding: 0px 17px;
   width: 100%;
   padding: 9px;
   margin-top: 3px;
+  outline: none;
 }
 .span-gender{
   grid-column-start: 1;
@@ -1109,6 +1109,9 @@ select option:hover
     display: none;
   }
   .hero-section .slick-prev{
+    display: none;
+  }
+  .cross{
     display: none;
   }
 .menu-items ul li {
@@ -1340,6 +1343,7 @@ select option:hover
   }
   .notification-bar{
     padding: 14px 0px;
+    z-index: 1000;
   }
   .notification-bar p{
     font-size: 12px;
@@ -1348,8 +1352,15 @@ select option:hover
     width: 100%;
     padding-right: 15px;
   }
+  .notification-bar .container{
+    padding-right: 28px;
+  }
   .top-nav{
     padding: 17px 0px;
+    position: relative;
+    z-index: 1000;
+    background: #052f22 url(../img/pattern-bg.png);
+    
   }
   .top-nav .logo{
     width: 92px;
@@ -1359,8 +1370,42 @@ select option:hover
     display: none;
   }
   .main-menu .container {
-    display: none;
+    flex-direction: column-reverse;
 }
+.main-menu .container ul{
+  flex-direction: column;
+}
+.menu-items{
+  width: 100%;
+}
+.hamburger:hover{
+  cursor: pointer;
+}
+.menu-items ul{
+align-items: start;
+}
+.main-menu{
+  width: 100%;
+  padding: 0px;
+  background: #115031 url(../img/pattern-bg.png);
+  position: absolute;
+  
+  top: 167%;
+  z-index: 99;
+  height: 100vh;
+  transform: translateY(-150%);
+  
+}
+.main-menu.active{
+  transform: translateY(0);
+  transition: 0.6s;
+}
+.search{
+  width: 100%;
+  margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 .hamburger{
   display: block;
 }
@@ -1372,17 +1417,19 @@ select option:hover
     display: flex;
     z-index: 1;
     text-align: center;
+    z-index: 1000;
     
 }
-.header-button .btn{
-  background-image: url(../img/pattern-bg.png);
-}
+
+
 .header-button a{
   background-image: url(../img/pattern-bg.png);
 }
 
+
 .main-content{
   width: 100%;
+  margin-bottom: 50px;
 }
 .main-body .container {
   position: relative;
@@ -1390,6 +1437,8 @@ select option:hover
   justify-content: space-between;
   flex-direction: column;
 }
+.main-body {
+  padding: 35px 0px 0px 0px;}
 .header-button .btn{
 
   width: 50%;
@@ -1407,7 +1456,7 @@ select option:hover
   flex-direction: column-reverse;
 }
 .hero-content{
-  margin-top: 27px;
+  margin-top: 31px;
   width: 100%;
 }
 .hero-section{
@@ -1420,12 +1469,14 @@ select option:hover
   line-height: 38px;}
 
   .hero-content p{
-    word-spacing: 0px;
+    word-spacing: 2px;
     font-size: 16px;
     
     line-height: 22px;
     padding-top: 14px;
-    word-spacing: 1px;
+  
+    padding-bottom: 70px;
+    padding-right: 0px;
   }
 .slider-arrows{
   display: none;
@@ -1442,19 +1493,20 @@ select option:hover
 }
 .image-box{
   margin: 0px;
+  padding-top: 32px;
 }
 .image-box a {
   position: absolute;
-  top: 21%;
+  top: 18%;
   transform: translateX(141px);
   height: 62px;
   width: 62px;}
   .image-box img:last-child {
     display: block;
     width: 23px;
-    height: 56px;
+    height: 30px;
     position: absolute;
-    top: 24%;
+    top: 49%;
     transform: translateY(-50%);
     right: 27%;
 }
@@ -1472,6 +1524,7 @@ select option:hover
 }
 .zigzag-section .zigzag-img img{
   width: 100%;
+  height: 200px;
 }
 .zigzag-container .zigzag-section:nth-child(even) {
   flex-direction: column;
@@ -1490,6 +1543,74 @@ select option:hover
   .contact-us .container h2 {
     font-size: 24px;}
 
+    .slick-slide img {
+      
+      width: 55%;
+      height: auto;
+      transform: translateX(70px);}
+      .hero-section .slick-dots {
+        position: absolute;
+        bottom: 16px;}
+
+
+        .slider-image img {
+          height: 336px;}
+
+          .main-content .slick-slide {
+            margin: 0px 13px;}
+            .main-content .slider-image {
+              width: 100%;
+              height: 377px;}
+              .slider-image .slick-dots {
+                position: absolute;
+                top: 95%;
+                transform: translateY(6%);}
+
+                .main-content hr {
+                  margin-bottom: 29px;
+                  margin-top: 29px;
+              }
+              .cards .card-heading {
+                
+                padding-right: 27px;}
+                .cards .card-body {
+                  padding: 17px 10px 26px;
+              }
+              .cards {
+                grid-gap: 19px 32px;
+              
+                margin-bottom: 30px;
+             
+            }
+            .zigzag-section .zigzag-img{
+              flex: 1 1 200px;
+            }
+            .zigzag-section .zigzag-description {
+              padding: 16px 11px 16px 11px;}
+              .contact-us{
+                padding: 36px 0px;
+              }
+              .contact-us .form{
+                margin-top: 25px;
+              }
+            .footer{
+              padding: 27px 0px;
+            }
+            .footer-menu ul li {
+              position: relative;
+              padding: 5px 15px 0px 15px;
+          }
+          .menu-items ul li {
+            clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
+            padding: 19px 29px 19px 20px;
+            transform: skew(0deg);
+        }
+        .menu-items span {
+          display: inline-block;
+          transform: skew(0deg);}
+          .menu-items ul li a{
+            line-height:22px;
+        }
 
 
 }
